@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="app">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Test" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{{page_title}}</title>
+
+        <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/main.css" /><!--EDIT ME -->
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+    </head>
+    <body ng-cloak>
+        <div ng-view ></div>
+
+        <!-- libs -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Angular Material requires Angular.js Libraries -->
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-cookies.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-resource.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+
+        <!-- Angular Material Library -->
+        <script src="//ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+
+        <!-- app code -->
+        <script src="/app/app.js"></script>
+        <script src="/app/app-router.js"></script>
+        <script src="/app/app-controller.js"></script>
+
+        <!-- modules -->
+        <script src="/app/splash/splash-controller.js"></script>
+
+        <!-- components -->
+        <script src="/app/components/appheader/appheader.js"></script>
+        <script src="/app/components/appfooter/appfooter.js"></script>
+        <script src="/app/components/apptitle/apptitle.js"></script>
+        <script src="/app/components/appsidebar/appsidebar.js"></script>
+
+        <!--  -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>

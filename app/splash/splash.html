@@ -1,0 +1,65 @@
+<appheader></appheader>
+
+<md-card>
+    <md-content flex>
+        <md-chips
+                ng-model="first_team"
+                read-only="isReadOnly"
+                placeholder="+ Players"
+                secondary-placeholder="+ Players"
+                >
+            <md-chip-template>
+                <span class="md-display-headline">{{$chip}}</span>
+            </md-chip-template>
+        </md-chips>
+
+
+
+    </md-content>
+    <md-content row class="score-section">
+        <md-button class="md-fab  md-hue-2" column ng-click="first_team_score = first_team_score - 1" ng-disabled="first_team_score == 0">
+            <md-icon class="fa fa-minus"></md-icon>
+        </md-button>
+
+        <input column class="score" required type="number" step="1" name="first_team_score" ng-model="first_team_score" min="0"
+               ng-keypress="filterValue($event)" ng-pattern="/^1234$/" />
+
+        <md-button class="md-fab md-primary  md-hue-1" column ng-click="first_team_score = first_team_score + 1">
+            <md-icon class="fa fa-plus"></md-icon>
+        </md-button>
+    </md-content>
+</md-card>
+
+<md-content row>
+    <h1 style="text-align:center;">vs</h1>
+</md-content>
+
+<md-card>
+    <md-content row class="score-section">
+        <md-button class="md-fab md-hue-2" column ng-click="second_team_score = second_team_score - 1" ng-disabled="second_team_score == 0">
+            <md-icon class="fa fa-minus"></md-icon>
+        </md-button>
+
+        <input column class="score" required type="number" step="1" name="second_team_score" ng-model="second_team_score" min="0"
+               ng-keypress="filterValue($event)" ng-pattern="/^1234$/" />
+
+        <md-button class="md-fab md-primary md-hue-1" column ng-click="second_team_score = second_team_score + 1">
+            <md-icon class="fa fa-plus"></md-icon>
+        </md-button>
+    </md-content>
+
+    <md-content flex>
+        <md-chips
+                class="md-display-1"
+                ng-model="second_team"
+                read-only="isReadOnly"
+                placeholder="+ Players"
+                secondary-placeholder="+ Players"
+                ></md-chips>
+
+
+
+    </md-content>
+
+
+</md-card>
